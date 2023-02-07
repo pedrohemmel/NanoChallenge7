@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D49C0B22992C30D0046CBA4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B12992C30D0046CBA4 /* Model.swift */; };
+		0D49C0B42992C3990046CBA4 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B32992C3990046CBA4 /* WebServices.swift */; };
+		0D49C0B62992CC3B0046CBA4 /* ArtesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B52992CC3B0046CBA4 /* ArtesViewModel.swift */; };
 		BB380953298D797D0087F515 /* NanoChallenge7App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB380952298D797D0087F515 /* NanoChallenge7App.swift */; };
 		BB380955298D797D0087F515 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB380954298D797D0087F515 /* ContentView.swift */; };
 		BB380957298D797F0087F515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB380956298D797F0087F515 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D49C0B12992C30D0046CBA4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0D49C0B32992C3990046CBA4 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		0D49C0B52992CC3B0046CBA4 /* ArtesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtesViewModel.swift; sourceTree = "<group>"; };
 		BB38094F298D797D0087F515 /* NanoChallenge7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB380952298D797D0087F515 /* NanoChallenge7App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge7App.swift; sourceTree = "<group>"; };
 		BB380954298D797D0087F515 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,10 +100,13 @@
 		BB380951298D797D0087F515 /* NanoChallenge7 */ = {
 			isa = PBXGroup;
 			children = (
-				BB380956298D797F0087F515 /* Assets.xcassets */,
-				BB380958298D797F0087F515 /* Preview Content */,
+				0D49C0B12992C30D0046CBA4 /* Model.swift */,
 				BB380952298D797D0087F515 /* NanoChallenge7App.swift */,
 				BB380954298D797D0087F515 /* ContentView.swift */,
+				0D49C0B32992C3990046CBA4 /* WebServices.swift */,
+				0D49C0B52992CC3B0046CBA4 /* ArtesViewModel.swift */,
+				BB380956298D797F0087F515 /* Assets.xcassets */,
+				BB380958298D797F0087F515 /* Preview Content */,
 			);
 			path = NanoChallenge7;
 			sourceTree = "<group>";
@@ -257,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D49C0B22992C30D0046CBA4 /* Model.swift in Sources */,
 				BB380955298D797D0087F515 /* ContentView.swift in Sources */,
+				0D49C0B42992C3990046CBA4 /* WebServices.swift in Sources */,
 				BB380953298D797D0087F515 /* NanoChallenge7App.swift in Sources */,
+				0D49C0B62992CC3B0046CBA4 /* ArtesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

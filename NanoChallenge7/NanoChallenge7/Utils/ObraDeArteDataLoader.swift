@@ -7,34 +7,38 @@
 
 import Foundation
 
-class ObraDeArteDataLoader {
+class ObraDeArteDataLoader: ObservableObject {
+    @Published var obraDeArteDataModel: ObraDeArteDataModel?
     
-    var arrObraDeArteModel = [ObraDeArteModel]()
-    
+    //MARK: - Initializers
     init() {
         self.buscarDados()
     }
     
     func buscarDados() {
-        guard let url = URL(string: "https://api.artsy.net/api/artworks?client_id=aaabe76906f70a3c1c01&client_secret=d59c42cfc62acc61fc4d1ad2e106c406") else { return }
+        guard let url = URL(string: "https://api.artic.edu/api/v1/artworks?page=2&limit=2") else { return }
         
-        print(url)
-        
-        URLSession.shared.dataTask(with: url) { data, resp, err in
-            
-            if err != nil {
-                DispatchQueue.main.async {
-                    print(err!)
-                }
+        //MARK: - URLSession
+        URLSession.shared.dataTask(with: url) { dados, resposta, erro in
+            if let erro = erro {
+                print(erro)
+                return
+            }
+            guard let dados = dados else {
+                print("Data is nil")
                 return
             }
             
-            let posts = try? JSONDecoder().decode([ObraDeArteModel].self, from: data!)
-            
-            DispatchQueue.main.async {
-                self.arrObraDeArteModel = posts ?? [ObraDeArteModel]()
+            do {
+                let dadosDoJSON = try JSONDecoder().decode(ObraDeArteDataModel.self, from: dados)
+                
+                DispatchQueue.main.async {
+                    self.obraDeArteDataModel = dadosDoJSON
+                }
+                return
+            } catch {
+                print("Error to fetch data from API: \(error)")
             }
-            
         }.resume()
     }
 }

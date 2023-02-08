@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D49C0B22992C30D0046CBA4 /* ObraDeArteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B12992C30D0046CBA4 /* ObraDeArteModel.swift */; };
+		0D49C0B22992C30D0046CBA4 /* ObraDeArteDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B12992C30D0046CBA4 /* ObraDeArteDataModel.swift */; };
 		0D49C0B42992C3990046CBA4 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B32992C3990046CBA4 /* WebServices.swift */; };
 		0D49C0B62992CC3B0046CBA4 /* ArtesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B52992CC3B0046CBA4 /* ArtesViewModel.swift */; };
 		BB380953298D797D0087F515 /* NanoChallenge7App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB380952298D797D0087F515 /* NanoChallenge7App.swift */; };
@@ -18,6 +18,7 @@
 		BB38096E298D797F0087F515 /* NanoChallenge7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38096D298D797F0087F515 /* NanoChallenge7UITests.swift */; };
 		BB380970298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38096F298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift */; };
 		BBC310F52992D4BA005F8533 /* ObraDeArteDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */; };
+		BBC310F72994199B005F8533 /* ObraDeArteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC310F62994199B005F8533 /* ObraDeArteModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D49C0B12992C30D0046CBA4 /* ObraDeArteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteModel.swift; sourceTree = "<group>"; };
+		0D49C0B12992C30D0046CBA4 /* ObraDeArteDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteDataModel.swift; sourceTree = "<group>"; };
 		0D49C0B32992C3990046CBA4 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		0D49C0B52992CC3B0046CBA4 /* ArtesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtesViewModel.swift; sourceTree = "<group>"; };
 		BB38094F298D797D0087F515 /* NanoChallenge7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge7.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +53,7 @@
 		BB38096D298D797F0087F515 /* NanoChallenge7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge7UITests.swift; sourceTree = "<group>"; };
 		BB38096F298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge7UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteDataLoader.swift; sourceTree = "<group>"; };
+		BBC310F62994199B005F8533 /* ObraDeArteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +154,8 @@
 		BBC310F12992D22F005F8533 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0D49C0B12992C30D0046CBA4 /* ObraDeArteModel.swift */,
+				0D49C0B12992C30D0046CBA4 /* ObraDeArteDataModel.swift */,
+				BBC310F62994199B005F8533 /* ObraDeArteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,8 +304,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D49C0B22992C30D0046CBA4 /* ObraDeArteModel.swift in Sources */,
+				0D49C0B22992C30D0046CBA4 /* ObraDeArteDataModel.swift in Sources */,
 				BB380955298D797D0087F515 /* ContentView.swift in Sources */,
+				BBC310F72994199B005F8533 /* ObraDeArteModel.swift in Sources */,
 				0D49C0B42992C3990046CBA4 /* WebServices.swift in Sources */,
 				BB380953298D797D0087F515 /* NanoChallenge7App.swift in Sources */,
 				0D49C0B62992CC3B0046CBA4 /* ArtesViewModel.swift in Sources */,

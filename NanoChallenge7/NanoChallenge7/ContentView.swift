@@ -8,18 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var arrObraDeArte = ObraDeArteDataLoader().arrObraDeArteModel
+    @ObservedObject var obraDeArte = ObraDeArteDataLoader()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
+            AsyncImage(url: URL(string: "https://www.artic.edu/iiif/2/\(obraDeArte.obraDeArteDataModel?.data[0].image_id ?? "")/full/843,/0/default.jpg"))
+            
             Text("Hello, world!")
         }
         .padding()
-        .onAppear {
-            print(arrObraDeArte)
-        }
     }
 }
 

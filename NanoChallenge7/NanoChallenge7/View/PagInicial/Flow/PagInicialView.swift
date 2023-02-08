@@ -9,9 +9,11 @@ import Foundation
 import SwiftUI
 
 struct PagInicialView: View {
+    
+    @State var botaoDSomComponente = BotaoDSomComponente()
     var body: some View {
         VStack {
-            
+            botaoDSomComponente
         }
     }
 }

@@ -9,8 +9,11 @@ import Foundation
 import SwiftUI
 
 struct BotaoDSomComponente: View {
+    //MARK: - Global variables
     @State var tituloBotao = "speaker.wave.3.fill"
     @State var botaoFoiClicado = false
+    
+    //MARK: - Body
     var body: some View {
         HStack {
             Button {
@@ -18,9 +21,11 @@ struct BotaoDSomComponente: View {
             } label: {
                 Image(systemName: self.tituloBotao)
             }
+            .foregroundColor(Color.black)
         }
     }
     
+    //MARK: - Functions here
     func trocaTituloBotao() {
         if botaoFoiClicado {
             self.tituloBotao = "speaker.wave.3.fill"

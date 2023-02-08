@@ -9,11 +9,19 @@ import Foundation
 import SwiftUI
 
 struct PagInicialView: View {
-    
+    //MARK: - Global variables
     @State var botaoDSomComponente = BotaoDSomComponente()
+    
+    //MARK: - Body
     var body: some View {
         VStack {
-            botaoDSomComponente
+            HStack {
+                botaoDSomComponente
+                Spacer()
+            }
+            .padding(.trailing, 15)
+            Spacer()
         }
+        .background(Color(uiColor: UIColor(named: "begeApp")!))
     }
 }

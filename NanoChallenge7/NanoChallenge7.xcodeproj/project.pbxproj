@@ -176,18 +176,18 @@
 			isa = PBXGroup;
 			children = (
 				BBC3110A2994458A005F8533 /* Componentes */,
-				BBC3110329944481005F8533 /* Flow */,
+				BBC3110329944481005F8533 /* Fluxo */,
 			);
 			path = PagInicial;
 			sourceTree = "<group>";
 		};
-		BBC3110329944481005F8533 /* Flow */ = {
+		BBC3110329944481005F8533 /* Fluxo */ = {
 			isa = PBXGroup;
 			children = (
 				BBC311042994448D005F8533 /* PagInicialView.swift */,
 				BBC3110629944497005F8533 /* PagInicialViewModel.swift */,
 			);
-			path = Flow;
+			path = Fluxo;
 			sourceTree = "<group>";
 		};
 		BBC3110A2994458A005F8533 /* Componentes */ = {

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var arrObraDeArte = ObraDeArteDataLoader().arrObraDeArteModel
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,6 +17,9 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            print(arrObraDeArte)
+        }
     }
 }
 

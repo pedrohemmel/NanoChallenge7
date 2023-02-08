@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct artes: Codable, Hashable, Identifiable{
-    let id: Int
-    let nome: String
+struct ObraDeArteModel: Codable{
+    var id: String
+    var name: String
 }
 

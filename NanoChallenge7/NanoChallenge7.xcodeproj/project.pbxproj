@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D49C0B22992C30D0046CBA4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B12992C30D0046CBA4 /* Model.swift */; };
+		0D49C0B22992C30D0046CBA4 /* ObraDeArteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B12992C30D0046CBA4 /* ObraDeArteModel.swift */; };
 		0D49C0B42992C3990046CBA4 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B32992C3990046CBA4 /* WebServices.swift */; };
 		0D49C0B62992CC3B0046CBA4 /* ArtesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B52992CC3B0046CBA4 /* ArtesViewModel.swift */; };
 		BB380953298D797D0087F515 /* NanoChallenge7App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB380952298D797D0087F515 /* NanoChallenge7App.swift */; };
@@ -17,6 +17,7 @@
 		BB380964298D797F0087F515 /* NanoChallenge7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB380963298D797F0087F515 /* NanoChallenge7Tests.swift */; };
 		BB38096E298D797F0087F515 /* NanoChallenge7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38096D298D797F0087F515 /* NanoChallenge7UITests.swift */; };
 		BB380970298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38096F298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift */; };
+		BBC310F52992D4BA005F8533 /* ObraDeArteDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D49C0B12992C30D0046CBA4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0D49C0B12992C30D0046CBA4 /* ObraDeArteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteModel.swift; sourceTree = "<group>"; };
 		0D49C0B32992C3990046CBA4 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		0D49C0B52992CC3B0046CBA4 /* ArtesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtesViewModel.swift; sourceTree = "<group>"; };
 		BB38094F298D797D0087F515 /* NanoChallenge7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge7.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +51,7 @@
 		BB380969298D797F0087F515 /* NanoChallenge7UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoChallenge7UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB38096D298D797F0087F515 /* NanoChallenge7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge7UITests.swift; sourceTree = "<group>"; };
 		BB38096F298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge7UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteDataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,15 @@
 		BB380951298D797D0087F515 /* NanoChallenge7 */ = {
 			isa = PBXGroup;
 			children = (
-				0D49C0B12992C30D0046CBA4 /* Model.swift */,
+				BB380956298D797F0087F515 /* Assets.xcassets */,
+				BBC310F02992D227005F8533 /* Utils */,
+				BBC310F12992D22F005F8533 /* Model */,
+				BBC310F22992D272005F8533 /* View */,
+				BBC310F32992D27E005F8533 /* ViewModel */,
 				BB380952298D797D0087F515 /* NanoChallenge7App.swift */,
 				BB380954298D797D0087F515 /* ContentView.swift */,
 				0D49C0B32992C3990046CBA4 /* WebServices.swift */,
 				0D49C0B52992CC3B0046CBA4 /* ArtesViewModel.swift */,
-				BB380956298D797F0087F515 /* Assets.xcassets */,
 				BB380958298D797F0087F515 /* Preview Content */,
 			);
 			path = NanoChallenge7;
@@ -134,6 +139,36 @@
 				BB38096F298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift */,
 			);
 			path = NanoChallenge7UITests;
+			sourceTree = "<group>";
+		};
+		BBC310F02992D227005F8533 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BBC310F12992D22F005F8533 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D49C0B12992C30D0046CBA4 /* ObraDeArteModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BBC310F22992D272005F8533 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BBC310F32992D27E005F8533 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,11 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D49C0B22992C30D0046CBA4 /* Model.swift in Sources */,
+				0D49C0B22992C30D0046CBA4 /* ObraDeArteModel.swift in Sources */,
 				BB380955298D797D0087F515 /* ContentView.swift in Sources */,
 				0D49C0B42992C3990046CBA4 /* WebServices.swift in Sources */,
 				BB380953298D797D0087F515 /* NanoChallenge7App.swift in Sources */,
 				0D49C0B62992CC3B0046CBA4 /* ArtesViewModel.swift in Sources */,
+				BBC310F52992D4BA005F8533 /* ObraDeArteDataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

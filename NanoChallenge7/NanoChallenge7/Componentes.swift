@@ -11,7 +11,7 @@ import SwiftUI
 struct vistateste: View {
     var body: some View {
         VStack {
-            botao()
+          //  botao()
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
@@ -24,35 +24,37 @@ struct vistateste: View {
 
 
 struct conjuntoBotao: View{
+    
     var body:some View{
         HStack{
             VStack{
-                botao()
-                botao()
+                botao(textoBotao: "botao")
+                botao(textoBotao: "botao")
             }
             VStack{
-                botao()
-                botao()
+                botao(textoBotao: "botao")
+                botao(textoBotao: "botao")
             }
         }
     }
 }
 
 struct botao: View{
+    @State var textoBotao: String
+    
     
     var body: some View{
-        
+       
         HStack{
            // Text("isso")
             Button {
                 print("isso")
             } label: {
-                Text("isso")
+                Text(textoBotao)
                     .padding(.horizontal, 70)
                     .padding(.vertical, 20)
                     .background(Color("VerdeBotao"))
                     .cornerRadius(15)
-                    
                     .padding(.horizontal, 2)
                     .foregroundColor(.white)
                   

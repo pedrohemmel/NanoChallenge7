@@ -21,7 +21,7 @@ struct BotaoDSomComponente: View {
             } label: {
                 Image(systemName: self.tituloBotao)
             }
-            .foregroundColor(Color.black)
+            .foregroundColor(Color("azulApp"))
         }
     }
     

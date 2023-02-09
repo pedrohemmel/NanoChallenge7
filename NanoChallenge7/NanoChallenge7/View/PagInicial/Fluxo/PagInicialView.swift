@@ -15,7 +15,7 @@ struct PagInicialView: View {
         tituloBotao: "Start Quiz",
         espacamentoHorizontalBotao: 50,
         curvaturaBotao: 30,
-        acaoBotao: {print("Hello Caralho")})
+        acaoBotao: {AVAudio.sharedInstance().playSoundEffect("coinsound.wav")})
     
     //MARK: - Body
     var body: some View {

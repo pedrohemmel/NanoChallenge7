@@ -20,6 +20,8 @@
 		BBC31109299444CD005F8533 /* BotaoPadraoComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC31108299444CD005F8533 /* BotaoPadraoComponente.swift */; };
 		BBC3110C299445A2005F8533 /* BotaoDSomComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110B299445A2005F8533 /* BotaoDSomComponente.swift */; };
 		BBC3110E29949819005F8533 /* ExtensaoUIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110D29949819005F8533 /* ExtensaoUIScreen.swift */; };
+		BBC311102994B325005F8533 /* AVAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110F2994B325005F8533 /* AVAudio.swift */; };
+		BBC311122994B74D005F8533 /* coinsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = BBC311112994B74D005F8533 /* coinsound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		BBC31108299444CD005F8533 /* BotaoPadraoComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoPadraoComponente.swift; sourceTree = "<group>"; };
 		BBC3110B299445A2005F8533 /* BotaoDSomComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoDSomComponente.swift; sourceTree = "<group>"; };
 		BBC3110D29949819005F8533 /* ExtensaoUIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensaoUIScreen.swift; sourceTree = "<group>"; };
+		BBC3110F2994B325005F8533 /* AVAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudio.swift; sourceTree = "<group>"; };
+		BBC311112994B74D005F8533 /* coinsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coinsound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +148,10 @@
 		BBC310F02992D227005F8533 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BBC311112994B74D005F8533 /* coinsound.wav */,
 				BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */,
 				BBC3110D29949819005F8533 /* ExtensaoUIScreen.swift */,
+				BBC3110F2994B325005F8533 /* AVAudio.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC311122994B74D005F8533 /* coinsound.wav in Resources */,
 				BB38095A298D797F0087F515 /* Preview Assets.xcassets in Resources */,
 				BB380957298D797F0087F515 /* Assets.xcassets in Resources */,
 			);
@@ -337,6 +344,7 @@
 				BBC3110729944497005F8533 /* PagInicialViewModel.swift in Sources */,
 				BBC3110C299445A2005F8533 /* BotaoDSomComponente.swift in Sources */,
 				BBC31109299444CD005F8533 /* BotaoPadraoComponente.swift in Sources */,
+				BBC311102994B325005F8533 /* AVAudio.swift in Sources */,
 				BBC3110E29949819005F8533 /* ExtensaoUIScreen.swift in Sources */,
 				BBC311052994448D005F8533 /* PagInicialView.swift in Sources */,
 			);

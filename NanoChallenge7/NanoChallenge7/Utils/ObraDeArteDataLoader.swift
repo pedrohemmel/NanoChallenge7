@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ObraDeArteDataLoader {
+final class ObraDeArteDataLoader {
     
     var arrObraDeArteModel = [ObraDeArteModel]()
     

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct BotaoDSomComponente: View {
     //MARK: - Global variables
+    @Binding var somPermitido: Bool
     @State var tituloBotao = "speaker.wave.3.fill"
     @State var botaoFoiClicado = false
     
@@ -30,9 +31,11 @@ struct BotaoDSomComponente: View {
         if botaoFoiClicado {
             self.tituloBotao = "speaker.wave.3.fill"
             self.botaoFoiClicado.toggle()
+            self.somPermitido.toggle()
         } else {
             self.tituloBotao = "speaker.slash.fill"
             self.botaoFoiClicado.toggle()
+            self.somPermitido.toggle()
         }
     }
 }

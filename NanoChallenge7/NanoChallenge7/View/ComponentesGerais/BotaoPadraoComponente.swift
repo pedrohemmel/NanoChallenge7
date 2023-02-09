@@ -10,6 +10,7 @@ import SwiftUI
 
 struct BotaoPadraoComponente: View {
     //MARK: - Global variables
+    @Binding var somPermitido: Bool
     @State var tituloBotao: String
     @State var espacamentoHorizontalBotao: CGFloat
     @State var curvaturaBotao: CGFloat
@@ -19,7 +20,9 @@ struct BotaoPadraoComponente: View {
      var body: some View {
          HStack {
              Button {
-                 self.acaoBotao()
+                 if somPermitido {
+                     self.acaoBotao()
+                 }
              } label: {
                  Text(self.tituloBotao)
                      .foregroundColor(.white)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ObraDeArteModel: Codable{
+struct ObraDeArteModel: Codable {
     var id: String
     var name: String
 }

@@ -1,4 +1,4 @@
-// !$*UTF8*$!
+ // !$*UTF8*$!
 {
 	archiveVersion = 1;
 	classes = {
@@ -23,6 +23,7 @@
 		BBC311102994B325005F8533 /* AVAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110F2994B325005F8533 /* AVAudio.swift */; };
 		BBC311122994B74D005F8533 /* coinsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = BBC311112994B74D005F8533 /* coinsound.wav */; };
 		BBC310F72994199B005F8533 /* ObraDeArteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC310F62994199B005F8533 /* ObraDeArteModel.swift */; };
+		EB34F6CB29942502005DD5CE /* Card_Exibicao_Imagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB34F6CA29942502005DD5CE /* Card_Exibicao_Imagem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		BBC3110F2994B325005F8533 /* AVAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudio.swift; sourceTree = "<group>"; };
 		BBC311112994B74D005F8533 /* coinsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coinsound.wav; sourceTree = "<group>"; };
 		BBC310F62994199B005F8533 /* ObraDeArteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteModel.swift; sourceTree = "<group>"; };
+		EB34F6CA29942502005DD5CE /* Card_Exibicao_Imagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Card_Exibicao_Imagem.swift; path = NanoChallenge7/View/Card_Exibicao_Imagem.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 		BBC310F22992D272005F8533 /* View */ = {
 			isa = PBXGroup;
 			children = (
+                EB34F6CA29942502005DD5CE /* Card_Exibicao_Imagem.swift */,
 				BBC3110129944426005F8533 /* ComponentesGerais */,
 				BBC3110229944433005F8533 /* PagInicial */,
 			);
@@ -208,6 +211,14 @@
 				BBC3110B299445A2005F8533 /* BotaoDSomComponente.swift */,
 			);
 			path = Componentes;
+			sourceTree = "<group>";
+		};
+		EB34F6CC2994263E005DD5CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB34F6CA29942502005DD5CE /* Card_Exibicao_Imagem.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +362,7 @@
 				BBC311102994B325005F8533 /* AVAudio.swift in Sources */,
 				BBC3110E29949819005F8533 /* ExtensaoUIScreen.swift in Sources */,
 				BBC311052994448D005F8533 /* PagInicialView.swift in Sources */,
+				EB34F6CB29942502005DD5CE /* Card_Exibicao_Imagem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

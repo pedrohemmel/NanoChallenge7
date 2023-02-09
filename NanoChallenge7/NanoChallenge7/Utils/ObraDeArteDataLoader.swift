@@ -8,9 +8,10 @@
 import Foundation
 
 class ObraDeArteDataLoader: ObservableObject {
+    //MARK: - Variáveis globais
     @Published var obraDeArteDataModel: ObraDeArteDataModel?
     
-    //MARK: - Initializers
+    //MARK: - Inicializador
     init() {
         self.buscarDados()
     }

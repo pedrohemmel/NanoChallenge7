@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D49C0B22992C30D0046CBA4 /* ObraDeArteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B12992C30D0046CBA4 /* ObraDeArteModel.swift */; };
+		0D49C0B22992C30D0046CBA4 /* ObraDeArteDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49C0B12992C30D0046CBA4 /* ObraDeArteDataModel.swift */; };
 		BB380953298D797D0087F515 /* NanoChallenge7App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB380952298D797D0087F515 /* NanoChallenge7App.swift */; };
 		BB380957298D797F0087F515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB380956298D797F0087F515 /* Assets.xcassets */; };
 		BB38095A298D797F0087F515 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB380959298D797F0087F515 /* Preview Assets.xcassets */; };
@@ -22,6 +22,7 @@
 		BBC3110E29949819005F8533 /* ExtensaoUIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110D29949819005F8533 /* ExtensaoUIScreen.swift */; };
 		BBC311102994B325005F8533 /* AVAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110F2994B325005F8533 /* AVAudio.swift */; };
 		BBC311122994B74D005F8533 /* coinsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = BBC311112994B74D005F8533 /* coinsound.wav */; };
+		BBC310F72994199B005F8533 /* ObraDeArteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC310F62994199B005F8533 /* ObraDeArteModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D49C0B12992C30D0046CBA4 /* ObraDeArteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteModel.swift; sourceTree = "<group>"; };
+		0D49C0B12992C30D0046CBA4 /* ObraDeArteDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteDataModel.swift; sourceTree = "<group>"; };
 		BB38094F298D797D0087F515 /* NanoChallenge7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB380952298D797D0087F515 /* NanoChallenge7App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge7App.swift; sourceTree = "<group>"; };
 		BB380956298D797F0087F515 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		BBC3110D29949819005F8533 /* ExtensaoUIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensaoUIScreen.swift; sourceTree = "<group>"; };
 		BBC3110F2994B325005F8533 /* AVAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudio.swift; sourceTree = "<group>"; };
 		BBC311112994B74D005F8533 /* coinsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coinsound.wav; sourceTree = "<group>"; };
+		BBC310F62994199B005F8533 /* ObraDeArteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +161,8 @@
 		BBC310F12992D22F005F8533 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0D49C0B12992C30D0046CBA4 /* ObraDeArteModel.swift */,
+				0D49C0B12992C30D0046CBA4 /* ObraDeArteDataModel.swift */,
+				BBC310F62994199B005F8533 /* ObraDeArteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,7 +341,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D49C0B22992C30D0046CBA4 /* ObraDeArteModel.swift in Sources */,
+				0D49C0B22992C30D0046CBA4 /* ObraDeArteDataModel.swift in Sources */,
+				BBC310F72994199B005F8533 /* ObraDeArteModel.swift in Sources */,
 				BB380953298D797D0087F515 /* NanoChallenge7App.swift in Sources */,
 				BBC310F52992D4BA005F8533 /* ObraDeArteDataLoader.swift in Sources */,
 				BBC3110729944497005F8533 /* PagInicialViewModel.swift in Sources */,

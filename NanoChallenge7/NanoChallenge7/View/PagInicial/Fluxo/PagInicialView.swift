@@ -19,9 +19,26 @@ struct PagInicialView: View {
                 botaoDSomComponente
                 Spacer()
             }
-            .padding(.trailing, 15)
+            
+            .padding(.leading, 15)
+            Spacer()
+            Image(uiImage: UIImage(named: "LogoDefinido")!)
+                .resizable()
+                .frame(width: UIScreen.screemWidth / 2, height: UIScreen.screemWidth / 2)
+            
+            Button {
+                print("Hello")
+            } label: {
+                Text("Quiz")
+                    .foregroundColor(.white)
+            }
+            .padding([.top, .bottom], 20)
+            .padding([.leading, .trailing], 50)
+            .background(Color(uiColor: UIColor(named: "azulApp")!))
+            .padding(.top, 50)
+
             Spacer()
         }
-        .background(Color(uiColor: UIColor(named: "begeApp")!))
+        .background(.white)
     }
 }

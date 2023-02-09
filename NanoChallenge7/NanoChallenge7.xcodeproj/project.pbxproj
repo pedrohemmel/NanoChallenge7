@@ -19,6 +19,7 @@
 		BBC3110729944497005F8533 /* PagInicialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110629944497005F8533 /* PagInicialViewModel.swift */; };
 		BBC31109299444CD005F8533 /* BotaoPadraoComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC31108299444CD005F8533 /* BotaoPadraoComponente.swift */; };
 		BBC3110C299445A2005F8533 /* BotaoDSomComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110B299445A2005F8533 /* BotaoDSomComponente.swift */; };
+		BBC3110E29949819005F8533 /* ExtensaoUIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110D29949819005F8533 /* ExtensaoUIScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		BBC3110629944497005F8533 /* PagInicialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagInicialViewModel.swift; sourceTree = "<group>"; };
 		BBC31108299444CD005F8533 /* BotaoPadraoComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoPadraoComponente.swift; sourceTree = "<group>"; };
 		BBC3110B299445A2005F8533 /* BotaoDSomComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoDSomComponente.swift; sourceTree = "<group>"; };
+		BBC3110D29949819005F8533 /* ExtensaoUIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensaoUIScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */,
+				BBC3110D29949819005F8533 /* ExtensaoUIScreen.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				BBC3110729944497005F8533 /* PagInicialViewModel.swift in Sources */,
 				BBC3110C299445A2005F8533 /* BotaoDSomComponente.swift in Sources */,
 				BBC31109299444CD005F8533 /* BotaoPadraoComponente.swift in Sources */,
+				BBC3110E29949819005F8533 /* ExtensaoUIScreen.swift in Sources */,
 				BBC311052994448D005F8533 /* PagInicialView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

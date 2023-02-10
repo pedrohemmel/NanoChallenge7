@@ -11,9 +11,3 @@ struct ObraDeArteDataModel: Codable{
     var data: [ObraDeArteModel]
 }
 
-extension ObraDeArteDataModel: Equatable {
-    static func == (lhs: ObraDeArteDataModel, rhs: ObraDeArteDataModel) -> Bool {
-        return true
-    }
-}
-

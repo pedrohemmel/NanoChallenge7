@@ -17,7 +17,7 @@ class ObraDeArteDataLoader: ObservableObject {
     }
     
     func buscarDados() {
-        guard let url = URL(string: "https://api.artic.edu/api/v1/artworks?page=2&limit=2") else { return }
+        guard let url = URL(string: "https://api.artic.edu/api/v1/artworks?page=2&limit=10") else { return }
         
         //MARK: - URLSession
         URLSession.shared.dataTask(with: url) { dados, resposta, erro in
@@ -29,7 +29,9 @@ class ObraDeArteDataLoader: ObservableObject {
                 print("Data is nil")
                 return
             }
-            
+            if let dataString = String(data: dados, encoding: .utf8) {
+//                print("got dataString: \n\(dataString)")
+            }
             do {
                 let dadosDoJSON = try JSONDecoder().decode(ObraDeArteDataModel.self, from: dados)
                 

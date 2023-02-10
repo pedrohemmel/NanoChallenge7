@@ -6,9 +6,19 @@
 //
 
 import Foundation
+import SwiftUI
 
 class PagPerguntasViewModel {
-    func buscarObrasDeArte() -> ObraDeArteDataModel {
-        return ObraDeArteDataLoader().obraDeArteDataModel ?? ObraDeArteDataModel(data: [ObraDeArteModel]())
+    
+    var obraDeArteDataLoader: ObraDeArteDataLoader = ObraDeArteDataLoader()
+    
+    func buscarObrasDeArte() {
+        self.obraDeArteDataLoader.buscarDados()
+    }
+    
+    func buscaObraDeArteRandomica() -> ObraDeArteModel {
+        let randomNumber = Int.random(in: 0...obraDeArteDataLoader.obraDeArteDataModel!.data.count-1)
+        
+        return obraDeArteDataLoader.obraDeArteDataModel!.data[randomNumber]
     }
 }

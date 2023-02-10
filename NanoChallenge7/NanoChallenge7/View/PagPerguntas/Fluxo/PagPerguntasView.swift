@@ -9,27 +9,52 @@ import SwiftUI
 
 struct PagPerguntasView: View {
     //MARK: Variáveis globais
-    private var pagPerguntasViewModel = PagPerguntasViewModel()
+    @State var pagPerguntasViewModel = PagPerguntasViewModel()
     
-    @State var obraDeArteDataModel: ObraDeArteDataModel
+    @State var obraDeArteModel: ObraDeArteModel?
     @State var cartaoArteComponente: CartaoArteComponente?
-    
-    //MARK: - Initializer
-    init() {
-        self.obraDeArteDataModel = pagPerguntasViewModel.buscarObrasDeArte()
-    }
     
     //MARK: - Body
     var body: some View {
-        VStack {
-            cartaoArteComponente
+        
+        ZStack {
+            if pagPerguntasViewModel.obraDeArteDataLoader.obraDeArteDataModel?.data != nil {
+                ProgressView()
+            } else {
+                VStack {
+                    cartaoArteComponente
+                }
+                .onAppear {
+                    //MARK: - OnAppear cartaoArteComponente
+                    print(pagPerguntasViewModel.obraDeArteDataLoader.obraDeArteDataModel?.data != nil)
+                    self.obraDeArteModel = pagPerguntasViewModel.buscaObraDeArteRandomica()
+                    
+                    self.cartaoArteComponente = CartaoArteComponente(
+                        autor: self.obraDeArteModel?.artist_display ?? "",
+                        nomeObra: self.obraDeArteModel?.title ?? "",
+                        localObra: self.obraDeArteModel?.place_of_origin ?? "",
+                        materialObra: self.obraDeArteModel?.medium_display ?? "",
+                        dimensaoObra: self.obraDeArteModel?.dimensions ?? "",
+                        imagem_id: self.obraDeArteModel?.image_id ?? "")
+                }
+            }
+            
+        }
+        .onDisappear {
+            print(pagPerguntasViewModel.obraDeArteDataLoader.obraDeArteDataModel?.data)
         }
         .onAppear {
             //MARK: - OnAppear
-            
-        }
-        .onChange(of: self.obraDeArteDataModel) { _ in
-            print("Ola")
+            pagPerguntasViewModel.buscarObrasDeArte()
+//            self.obraDeArteModel = pagPerguntasViewModel.buscaObraDeArteRandomica()
+//
+//            self.cartaoArteComponente = CartaoArteComponente(
+//                autor: self.obraDeArteModel?.artist_display ?? "",
+//                nomeObra: self.obraDeArteModel?.title ?? "",
+//                localObra: self.obraDeArteModel?.place_of_origin ?? "",
+//                materialObra: self.obraDeArteModel?.medium_display ?? "",
+//                dimensaoObra: self.obraDeArteModel?.dimensions ?? "",
+//                imagem_id: self.obraDeArteModel?.image_id ?? "")
         }
     }
 }

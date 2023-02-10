@@ -1,4 +1,4 @@
- // !$*UTF8*$!
+// !$*UTF8*$!
 {
 	archiveVersion = 1;
 	classes = {
@@ -15,15 +15,14 @@
 		BB38096E298D797F0087F515 /* NanoChallenge7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38096D298D797F0087F515 /* NanoChallenge7UITests.swift */; };
 		BB380970298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38096F298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift */; };
 		BBC310F52992D4BA005F8533 /* ObraDeArteDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */; };
+		BBC310F72994199B005F8533 /* ObraDeArteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC310F62994199B005F8533 /* ObraDeArteModel.swift */; };
 		BBC311052994448D005F8533 /* PagInicialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC311042994448D005F8533 /* PagInicialView.swift */; };
 		BBC3110729944497005F8533 /* PagInicialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110629944497005F8533 /* PagInicialViewModel.swift */; };
 		BBC31109299444CD005F8533 /* BotaoPadraoComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC31108299444CD005F8533 /* BotaoPadraoComponente.swift */; };
 		BBC3110C299445A2005F8533 /* BotaoDSomComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110B299445A2005F8533 /* BotaoDSomComponente.swift */; };
 		BBC3110E29949819005F8533 /* ExtensaoUIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110D29949819005F8533 /* ExtensaoUIScreen.swift */; };
 		BBC311102994B325005F8533 /* AVAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110F2994B325005F8533 /* AVAudio.swift */; };
-		BBC311122994B74D005F8533 /* coinsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = BBC311112994B74D005F8533 /* coinsound.wav */; };
-		BBC310F72994199B005F8533 /* ObraDeArteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC310F62994199B005F8533 /* ObraDeArteModel.swift */; };
-		EB34F6CB29942502005DD5CE /* Card_Exibicao_Imagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB34F6CA29942502005DD5CE /* Card_Exibicao_Imagem.swift */; };
+		EB34F6CB29942502005DD5CE /* CartaoArteComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB34F6CA29942502005DD5CE /* CartaoArteComponente.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,15 +54,14 @@
 		BB38096D298D797F0087F515 /* NanoChallenge7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge7UITests.swift; sourceTree = "<group>"; };
 		BB38096F298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge7UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteDataLoader.swift; sourceTree = "<group>"; };
+		BBC310F62994199B005F8533 /* ObraDeArteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteModel.swift; sourceTree = "<group>"; };
 		BBC311042994448D005F8533 /* PagInicialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagInicialView.swift; sourceTree = "<group>"; };
 		BBC3110629944497005F8533 /* PagInicialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagInicialViewModel.swift; sourceTree = "<group>"; };
 		BBC31108299444CD005F8533 /* BotaoPadraoComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoPadraoComponente.swift; sourceTree = "<group>"; };
 		BBC3110B299445A2005F8533 /* BotaoDSomComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotaoDSomComponente.swift; sourceTree = "<group>"; };
 		BBC3110D29949819005F8533 /* ExtensaoUIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensaoUIScreen.swift; sourceTree = "<group>"; };
 		BBC3110F2994B325005F8533 /* AVAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudio.swift; sourceTree = "<group>"; };
-		BBC311112994B74D005F8533 /* coinsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coinsound.wav; sourceTree = "<group>"; };
-		BBC310F62994199B005F8533 /* ObraDeArteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteModel.swift; sourceTree = "<group>"; };
-		EB34F6CA29942502005DD5CE /* Card_Exibicao_Imagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Card_Exibicao_Imagem.swift; path = NanoChallenge7/View/Card_Exibicao_Imagem.swift; sourceTree = SOURCE_ROOT; };
+		EB34F6CA29942502005DD5CE /* CartaoArteComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CartaoArteComponente.swift; path = NanoChallenge7/View/CartaoArteComponente.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +150,6 @@
 		BBC310F02992D227005F8533 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				BBC311112994B74D005F8533 /* coinsound.wav */,
 				BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */,
 				BBC3110D29949819005F8533 /* ExtensaoUIScreen.swift */,
 				BBC3110F2994B325005F8533 /* AVAudio.swift */,
@@ -172,7 +169,7 @@
 		BBC310F22992D272005F8533 /* View */ = {
 			isa = PBXGroup;
 			children = (
-                EB34F6CA29942502005DD5CE /* Card_Exibicao_Imagem.swift */,
+				EB34F6CA29942502005DD5CE /* CartaoArteComponente.swift */,
 				BBC3110129944426005F8533 /* ComponentesGerais */,
 				BBC3110229944433005F8533 /* PagInicial */,
 			);
@@ -211,14 +208,6 @@
 				BBC3110B299445A2005F8533 /* BotaoDSomComponente.swift */,
 			);
 			path = Componentes;
-			sourceTree = "<group>";
-		};
-		EB34F6CC2994263E005DD5CE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EB34F6CA29942502005DD5CE /* Card_Exibicao_Imagem.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,7 +314,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBC311122994B74D005F8533 /* coinsound.wav in Resources */,
 				BB38095A298D797F0087F515 /* Preview Assets.xcassets in Resources */,
 				BB380957298D797F0087F515 /* Assets.xcassets in Resources */,
 			);
@@ -362,7 +350,7 @@
 				BBC311102994B325005F8533 /* AVAudio.swift in Sources */,
 				BBC3110E29949819005F8533 /* ExtensaoUIScreen.swift in Sources */,
 				BBC311052994448D005F8533 /* PagInicialView.swift in Sources */,
-				EB34F6CB29942502005DD5CE /* Card_Exibicao_Imagem.swift in Sources */,
+				EB34F6CB29942502005DD5CE /* CartaoArteComponente.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

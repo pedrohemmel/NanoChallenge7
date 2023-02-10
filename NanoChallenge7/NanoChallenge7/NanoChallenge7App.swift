@@ -11,8 +11,8 @@ import SwiftUI
 struct NanoChallenge7App: App {
     var body: some Scene {
         WindowGroup {
-//            PagInicialView()
-            Card_Exibicao_Imagem(autor: "Pedro", nomeObra: "Pedrolas", localObra: "Capao", materialObra: "Leite", dimensaoObra: "24 de pica")
+            PagInicialView()
+//            Card_Exibicao_Imagem(autor: "Pedro", nomeObra: "Pedrolas", localObra: "Capao", materialObra: "Leite", dimensaoObra: "24 de pica")
         }
     }
 }

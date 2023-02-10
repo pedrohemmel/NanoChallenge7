@@ -8,5 +8,7 @@
 import Foundation
 
 class PagPerguntasViewModel {
-    
+    func buscarObrasDeArte() -> ObraDeArteDataModel {
+        return ObraDeArteDataLoader().obraDeArteDataModel ?? ObraDeArteDataModel(data: [ObraDeArteModel]())
+    }
 }

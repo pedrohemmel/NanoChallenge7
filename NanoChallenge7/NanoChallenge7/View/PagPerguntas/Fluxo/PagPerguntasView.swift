@@ -13,6 +13,7 @@ struct PagPerguntasView: View {
     
     @State var obraDeArteModel: ObraDeArteModel?
     @State var cartaoArteComponente: CartaoArteComponente?
+    @State var respostasArteComponente: RespostasArteComponente = RespostasArteComponente()
     @State var recebeuDados = false
     
     //MARK: - Body
@@ -24,6 +25,7 @@ struct PagPerguntasView: View {
             } else {
                 VStack {
                     cartaoArteComponente
+                    respostasArteComponente
                 }
                 .onAppear {
                     //MARK: - OnAppear cartaoArteComponente

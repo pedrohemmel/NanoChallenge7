@@ -24,6 +24,7 @@
 		BBC311102994B325005F8533 /* AVAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3110F2994B325005F8533 /* AVAudio.swift */; };
 		BBC311192995E9F1005F8533 /* PagPerguntasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC311182995E9F1005F8533 /* PagPerguntasView.swift */; };
 		BBC3111B2995EA03005F8533 /* PagPerguntasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3111A2995EA03005F8533 /* PagPerguntasViewModel.swift */; };
+		BBC3111D29974E69005F8533 /* RespostasArteComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3111C29974E69005F8533 /* RespostasArteComponente.swift */; };
 		EB34F6CB29942502005DD5CE /* CartaoArteComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB34F6CA29942502005DD5CE /* CartaoArteComponente.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		BBC3110F2994B325005F8533 /* AVAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudio.swift; sourceTree = "<group>"; };
 		BBC311182995E9F1005F8533 /* PagPerguntasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagPerguntasView.swift; sourceTree = "<group>"; };
 		BBC3111A2995EA03005F8533 /* PagPerguntasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagPerguntasViewModel.swift; sourceTree = "<group>"; };
+		BBC3111C29974E69005F8533 /* RespostasArteComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespostasArteComponente.swift; sourceTree = "<group>"; };
 		EB34F6CA29942502005DD5CE /* CartaoArteComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CartaoArteComponente.swift; path = NanoChallenge7/View/PagPerguntas/Componentes/CartaoArteComponente.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				EB34F6CA29942502005DD5CE /* CartaoArteComponente.swift */,
+				BBC3111C29974E69005F8533 /* RespostasArteComponente.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			files = (
 				0D49C0B22992C30D0046CBA4 /* ObraDeArteDataModel.swift in Sources */,
 				BBC311192995E9F1005F8533 /* PagPerguntasView.swift in Sources */,
+				BBC3111D29974E69005F8533 /* RespostasArteComponente.swift in Sources */,
 				BBC310F72994199B005F8533 /* ObraDeArteModel.swift in Sources */,
 				BBC3111B2995EA03005F8533 /* PagPerguntasViewModel.swift in Sources */,
 				BB380953298D797D0087F515 /* NanoChallenge7App.swift in Sources */,

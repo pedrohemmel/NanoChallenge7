@@ -6,13 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ObraDeArteDataLoader: ObservableObject {
     //MARK: - Variáveis globais
     @Published var obraDeArteDataModel: ObraDeArteDataModel?
+    var recebeuDados: (() -> Void)
     
     //MARK: - Inicializador
-    init() {
+    init(recebeuDados: @escaping (() -> Void)) {
+        self.recebeuDados = recebeuDados
         self.buscarDados()
     }
     
@@ -29,14 +32,16 @@ class ObraDeArteDataLoader: ObservableObject {
                 print("Data is nil")
                 return
             }
-            if let dataString = String(data: dados, encoding: .utf8) {
+//            if let dataString = String(data: dados, encoding: .utf8) {
 //                print("got dataString: \n\(dataString)")
-            }
+//            }
+            
             do {
                 let dadosDoJSON = try JSONDecoder().decode(ObraDeArteDataModel.self, from: dados)
                 
                 DispatchQueue.main.async {
                     self.obraDeArteDataModel = dadosDoJSON
+                    self.recebeuDados()
                 }
                 return
             } catch {

@@ -13,12 +13,13 @@ struct PagPerguntasView: View {
     
     @State var obraDeArteModel: ObraDeArteModel?
     @State var cartaoArteComponente: CartaoArteComponente?
+    @State var recebeuDados = false
     
     //MARK: - Body
     var body: some View {
         
         ZStack {
-            if pagPerguntasViewModel.obraDeArteDataLoader.obraDeArteDataModel?.data != nil {
+            if !recebeuDados {
                 ProgressView()
             } else {
                 VStack {
@@ -26,7 +27,7 @@ struct PagPerguntasView: View {
                 }
                 .onAppear {
                     //MARK: - OnAppear cartaoArteComponente
-                    print(pagPerguntasViewModel.obraDeArteDataLoader.obraDeArteDataModel?.data != nil)
+                    print(pagPerguntasViewModel.obraDeArteDataLoader?.obraDeArteDataModel?.data != nil)
                     self.obraDeArteModel = pagPerguntasViewModel.buscaObraDeArteRandomica()
                     
                     self.cartaoArteComponente = CartaoArteComponente(
@@ -40,21 +41,12 @@ struct PagPerguntasView: View {
             }
             
         }
-        .onDisappear {
-            print(pagPerguntasViewModel.obraDeArteDataLoader.obraDeArteDataModel?.data)
-        }
         .onAppear {
             //MARK: - OnAppear
+            pagPerguntasViewModel.obraDeArteDataLoader = ObraDeArteDataLoader(recebeuDados: {
+                self.recebeuDados = true
+            })
             pagPerguntasViewModel.buscarObrasDeArte()
-//            self.obraDeArteModel = pagPerguntasViewModel.buscaObraDeArteRandomica()
-//
-//            self.cartaoArteComponente = CartaoArteComponente(
-//                autor: self.obraDeArteModel?.artist_display ?? "",
-//                nomeObra: self.obraDeArteModel?.title ?? "",
-//                localObra: self.obraDeArteModel?.place_of_origin ?? "",
-//                materialObra: self.obraDeArteModel?.medium_display ?? "",
-//                dimensaoObra: self.obraDeArteModel?.dimensions ?? "",
-//                imagem_id: self.obraDeArteModel?.image_id ?? "")
         }
     }
 }

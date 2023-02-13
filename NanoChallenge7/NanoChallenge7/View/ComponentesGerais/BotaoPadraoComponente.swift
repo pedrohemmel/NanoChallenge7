@@ -11,30 +11,34 @@ import SwiftUI
 struct BotaoPadraoComponente: View {
     //MARK: - Global variables
     @Binding var somPermitido: Bool
+    @Binding var able: Bool
+    
     @State var tituloBotao: String
     @State var espacamentoHorizontalBotao: CGFloat
     @State var curvaturaBotao: CGFloat
-    @State var acaoBotao: (() -> Void)
+    @State var acaoBotao: (() -> Color)
     @State var width: CGFloat? = nil
+    @State var colorOfButton = Color("azulApp")
     
     //MARK: - Body
      var body: some View {
          HStack {
              Button {
-                 if somPermitido {
-                     self.acaoBotao()
+                 if self.able {
+                     if self.somPermitido {
+                         
+                     }
+                     self.colorOfButton = self.acaoBotao()
                  }
              } label: {
                  Text(self.tituloBotao)
                      .foregroundColor(.white)
                      .padding(.horizontal, self.espacamentoHorizontalBotao)
                      .padding(.vertical, 20)
-                     .frame(width: width)
+                     .frame(width: self.width)
              }
-             
-             .background(Color("azulApp"))
+             .background(self.colorOfButton)
              .cornerRadius(self.curvaturaBotao)
-             
          }
      }
 }

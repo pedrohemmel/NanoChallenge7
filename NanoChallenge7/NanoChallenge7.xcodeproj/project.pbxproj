@@ -25,6 +25,7 @@
 		BBC311192995E9F1005F8533 /* PagPerguntasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC311182995E9F1005F8533 /* PagPerguntasView.swift */; };
 		BBC3111B2995EA03005F8533 /* PagPerguntasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3111A2995EA03005F8533 /* PagPerguntasViewModel.swift */; };
 		BBC3111D29974E69005F8533 /* RespostasArteComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3111C29974E69005F8533 /* RespostasArteComponente.swift */; };
+		BBC31121299AE33D005F8533 /* PagResultado.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC31120299AE33D005F8533 /* PagResultado.swift */; };
 		EB34F6CB29942502005DD5CE /* CartaoArteComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB34F6CA29942502005DD5CE /* CartaoArteComponente.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		BBC311182995E9F1005F8533 /* PagPerguntasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagPerguntasView.swift; sourceTree = "<group>"; };
 		BBC3111A2995EA03005F8533 /* PagPerguntasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagPerguntasViewModel.swift; sourceTree = "<group>"; };
 		BBC3111C29974E69005F8533 /* RespostasArteComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespostasArteComponente.swift; sourceTree = "<group>"; };
+		BBC31120299AE33D005F8533 /* PagResultado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagResultado.swift; sourceTree = "<group>"; };
 		EB34F6CA29942502005DD5CE /* CartaoArteComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CartaoArteComponente.swift; path = NanoChallenge7/View/PagPerguntas/Componentes/CartaoArteComponente.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -178,6 +180,7 @@
 				BBC3110129944426005F8533 /* ComponentesGerais */,
 				BBC3110229944433005F8533 /* PagInicial */,
 				BBC311152995E994005F8533 /* PagPerguntas */,
+				BBC3111E299AE2F5005F8533 /* PagResultado */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -241,6 +244,22 @@
 				BBC3111A2995EA03005F8533 /* PagPerguntasViewModel.swift */,
 			);
 			path = Fluxo;
+			sourceTree = "<group>";
+		};
+		BBC3111E299AE2F5005F8533 /* PagResultado */ = {
+			isa = PBXGroup;
+			children = (
+				BBC3111F299AE326005F8533 /* Flow */,
+			);
+			path = PagResultado;
+			sourceTree = "<group>";
+		};
+		BBC3111F299AE326005F8533 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				BBC31120299AE33D005F8533 /* PagResultado.swift */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC31121299AE33D005F8533 /* PagResultado.swift in Sources */,
 				0D49C0B22992C30D0046CBA4 /* ObraDeArteDataModel.swift in Sources */,
 				BBC311192995E9F1005F8533 /* PagPerguntasView.swift in Sources */,
 				BBC3111D29974E69005F8533 /* RespostasArteComponente.swift in Sources */,

@@ -11,9 +11,10 @@ import SwiftUI
 struct PagInicialView: View {
     //MARK: - Global variables
     private var pagInicialViewModel = PagInicialViewModel()
-    
     @State var comecaPerguntas = false
     @State var somPermitido = true
+    
+    //MARK: - Views
     @State var botaoDSomComponente: BotaoDSomComponente?
     @State var comecaQuizBotaoPadraoComponente: BotaoPadraoComponente?
     
@@ -43,13 +44,17 @@ struct PagInicialView: View {
                 self.botaoDSomComponente = BotaoDSomComponente(somPermitido: self.$somPermitido)
                 self.comecaQuizBotaoPadraoComponente = BotaoPadraoComponente(
                     somPermitido: self.$somPermitido,
+                    able: .constant(true),
                     tituloBotao: "Start Quiz",
                     espacamentoHorizontalBotao: 50,
                     curvaturaBotao: 30,
-                    acaoBotao: {self.comecaPerguntas = true})
+                    acaoBotao: {
+                        self.comecaPerguntas = true
+                        return Color("azulApp")
+                    })
             }
             .navigationDestination(isPresented: $comecaPerguntas) {
-                PagPerguntasView()
+                PagPerguntasView(somPermitido: self.$somPermitido)
             }
         }
     }

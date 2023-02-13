@@ -24,7 +24,7 @@ class PagPerguntasViewModel {
     func buscaObraDeArteRandomica() -> ObraDeArteModel {
         var numAleatorio = Int.random(in: 0...(self.obraDeArteDataLoader?.obraDeArteDataModel!.data.count ?? 1)-1)
         
-        while self.verificaSeOAnoEstaFormatado(ano: self.obraDeArteDataLoader?.obraDeArteDataModel?.data[numAleatorio].date_display ?? "") {
+        while !self.verificaSeOAnoEstaFormatado(ano: self.obraDeArteDataLoader?.obraDeArteDataModel?.data[numAleatorio].date_display ?? "") {
             numAleatorio = Int.random(in: 0...(self.obraDeArteDataLoader?.obraDeArteDataModel!.data.count ?? 1)-1)
         }
         
@@ -33,10 +33,17 @@ class PagPerguntasViewModel {
     
     func gerarPossiveisRespostas(respostaCerta: Int) -> [Int] {
         var arrayRespostas = [Int]()
-        for _ in 0...3 {
-            let numAleatorio = Int.random(in: (respostaCerta - 100)...(respostaCerta + 100))
-            arrayRespostas.append(numAleatorio)
+    
+        for i in 0...3 {
+            if i < 1 {
+                arrayRespostas.append(respostaCerta)
+            } else {
+                let numAleatorio = Int.random(in: (respostaCerta - 50)...(respostaCerta + 50))
+                arrayRespostas.append(numAleatorio)
+            }
         }
+        arrayRespostas.shuffle()
+        
         return arrayRespostas
     }
     

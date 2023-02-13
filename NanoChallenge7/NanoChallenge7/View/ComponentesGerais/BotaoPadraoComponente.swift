@@ -15,6 +15,7 @@ struct BotaoPadraoComponente: View {
     @State var espacamentoHorizontalBotao: CGFloat
     @State var curvaturaBotao: CGFloat
     @State var acaoBotao: (() -> Void)
+    @State var width: CGFloat? = nil
     
     //MARK: - Body
      var body: some View {
@@ -26,11 +27,14 @@ struct BotaoPadraoComponente: View {
              } label: {
                  Text(self.tituloBotao)
                      .foregroundColor(.white)
+                     .padding(.horizontal, self.espacamentoHorizontalBotao)
+                     .padding(.vertical, 20)
+                     .frame(width: width)
              }
-             .padding(.horizontal, self.espacamentoHorizontalBotao)
-             .padding(.vertical, 20)
+             
              .background(Color("azulApp"))
              .cornerRadius(self.curvaturaBotao)
+             
          }
      }
 }

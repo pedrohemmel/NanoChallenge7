@@ -37,7 +37,7 @@ struct PagInicialView: View {
                     .padding(.top, 50)
                 Spacer()
             }
-            .background(.white)
+            .background(Color("backgroundApp"))
             .onAppear {
                 //MARK: - OnAppear
                 self.botaoDSomComponente = BotaoDSomComponente(somPermitido: self.$somPermitido)

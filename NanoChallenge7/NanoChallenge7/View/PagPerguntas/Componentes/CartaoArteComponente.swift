@@ -14,11 +14,7 @@ struct CartaoArteComponente: View {
     var localObra: String
     var materialObra: String
     var dimensaoObra: String
-    var imagem_id: String {
-        didSet {
-            buscarImagem()
-        }
-    }
+    var imagem_id: String
     
     @State var data: Data?
     
@@ -29,7 +25,6 @@ struct CartaoArteComponente: View {
                 .font(.system(size: 30))
                 .fontWeight(.bold)
                 .foregroundColor(.black)
-            
             
             if let data = data, let uiImage = UIImage(data: data) {
                 Image(uiImage: uiImage)
@@ -44,28 +39,30 @@ struct CartaoArteComponente: View {
             }
             
             Text("\(nomeObra), \(localObra)")
-                .font(.system(size: 18))
+                .font(.system(size: 15))
                 .foregroundColor(Color(UIColor.gray))
                 .padding(.top, 5)
             Text("\(materialObra)")
-                .font(.system(size: 18))
+                .font(.system(size: 15))
                 .foregroundColor(Color(UIColor.gray))
                 .padding(.top, 3)
             Text("\(dimensaoObra)")
-                .font(.system(size: 18))
+                .font(.system(size: 15))
                 .foregroundColor(Color(UIColor.gray))
                 .padding(.top, 3)
         }
         .padding()
+        .frame(width: UIScreen.screemWidth - 30)
         .background(Color.white)
         .compositingGroup()
         .cornerRadius(10)
-        .shadow(color: Color.gray, radius: 10, x: 2, y: 0)
+        .shadow(color: Color.gray, radius: 10, x: 1, y: 0)
         .onAppear {
             buscarImagem()
         }
     }
     
+    //MARK: - Funções aqui
     func buscarImagem() {
         guard let url = URL(string: "https://www.artic.edu/iiif/2/\(self.imagem_id)/full/843,/0/default.jpg") else {
             return

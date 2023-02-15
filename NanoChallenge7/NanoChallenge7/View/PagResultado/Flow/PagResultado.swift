@@ -30,9 +30,12 @@ struct PagResultado: View {
         ZStack {
             VStack {
                 Spacer()
+                Spacer()
                 Text(self.txtResultado)
                     .font(.system(size: 20))
                     .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 15)
                 Spacer()
                 ZStack {
                     if let data = data, let uiImage = UIImage(data: data) {
@@ -50,11 +53,11 @@ struct PagResultado: View {
                             .frame(height: 200, alignment: .center)
                             .padding(.top, 5)
                     }
-                    
                 }
                 .frame(width: UIScreen.screemWidth)
                 Spacer()
                 botaoContinuar
+                Spacer()
                 Spacer()
             }
             .frame(width: UIScreen.screemWidth)

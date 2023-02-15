@@ -89,6 +89,12 @@ struct PagPerguntasView: View {
                     }
                 }
             }
+            
+            ToolbarItem(placement: .principal) {
+                if self.recebeuDados {
+                    Text("\(self.qtdPerguntas)/5")
+                }
+            }
         }
         .frame(width: UIScreen.screemWidth, height: UIScreen.screenHeight)
         .background(Color("backgroundApp"))
@@ -123,6 +129,7 @@ struct PagPerguntasView: View {
         if self.qtdPerguntas < 5 {
             self.verificaAcertoEIncrementaPergunta()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.tempoQuestao = 10
                 setupComponents()
             }
             return

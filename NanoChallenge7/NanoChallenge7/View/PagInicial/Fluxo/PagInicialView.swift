@@ -27,12 +27,10 @@ struct PagInicialView: View {
                     Spacer()
                 }
                 .padding(.leading, 15)
-                
                 Spacer()
-                
-                Image(uiImage: UIImage(named: "LogoDefinido")!)
+                Image(uiImage: UIImage(named: "logoDefinido")!)
                     .resizable()
-                    .frame(width: UIScreen.screemWidth / 2, height: UIScreen.screemWidth / 2)
+                    .frame(width: UIScreen.screemWidth / 1.5, height: UIScreen.screemWidth / 1.5)
                 
                 comecaQuizBotaoPadraoComponente
                     .padding(.top, 50)
@@ -46,12 +44,14 @@ struct PagInicialView: View {
                     somPermitido: self.$somPermitido,
                     able: .constant(true),
                     tituloBotao: "Start Quiz",
-                    espacamentoHorizontalBotao: 50,
-                    curvaturaBotao: 30,
                     acaoBotao: {
                         self.comecaPerguntas = true
                         return Color("azulApp")
-                    })
+                    },
+                    espacamentoHorizontalBotao: 10,
+                    curvaturaBotao: 20,
+                    width: UIScreen.screemWidth / 1.5,
+                    colorOfButton: Color("azulApp"))
             }
             .navigationDestination(isPresented: $comecaPerguntas) {
                 PagPerguntasView(somPermitido: self.$somPermitido)

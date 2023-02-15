@@ -13,10 +13,12 @@ struct PagPerguntasView: View {
  
     //MARK: Variáveis globais
     @Binding var somPermitido: Bool
+    @State var estaFazendoDismiss = false
     @State var acertouResposta = false
     @State var pagResultadoAtivo = false
+    @State var mostraErroInternet = false
     
-    @State var qtdPerguntas = 1
+    @State var qtdPerguntas = 0
     @State var qtdAcertos = 0
     
     @State var pagPerguntasViewModel = PagPerguntasViewModel()
@@ -25,9 +27,7 @@ struct PagPerguntasView: View {
     @State var obraDeArteModel: ObraDeArteModel?
     @State var recebeuDados = false
     
-    var oba = false
-    
-    @State var tempoQuestao = 10
+    @State var tempoQuestao = 60
     @State var tempoEstaCorrendo = false
     let temporizador = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -38,12 +38,31 @@ struct PagPerguntasView: View {
     //MARK: - Body
     var body: some View {
         ScrollView {
-            NavigationLink(destination: PagResultado(), isActive: self.$pagResultadoAtivo, label: {})
+            NavigationLink(
+                destination: PagResultado(
+                    somPermitido: $somPermitido,
+                    estaFazendoDismiss: self.$estaFazendoDismiss, acaoDismiss: {
+                        dismiss()
+                    },
+                    qtdAcertos: self.qtdAcertos,
+                    imagem_id: self.obraDeArteModel?.image_id ?? ""),
+                isActive: self.$pagResultadoAtivo,
+                label: {})
             if !recebeuDados {
                 VStack {
                     ProgressView()
+                    if self.mostraErroInternet {
+                        Text("Tem algo de errado com sua internet. Tente novamente mais tarde.")
+                            .foregroundColor(Color("vermelhoApp"))
+                    }
                 }
                 .frame(width: UIScreen.screemWidth, height: UIScreen.screenHeight)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                        self.tempoQuestao = 60
+                        setupComponents()
+                    }
+                }
             } else {
                 VStack {
                     cartaoArteComponente
@@ -79,6 +98,7 @@ struct PagPerguntasView: View {
                     HStack {
                         Image(systemName: "timer")
                             .foregroundColor(Color("vermelhoApp"))
+        
                         if tempoQuestao < 10 {
                             Text("00:0\(self.tempoQuestao)")
                                 .foregroundColor(Color("vermelhoApp"))
@@ -100,19 +120,23 @@ struct PagPerguntasView: View {
         .background(Color("backgroundApp"))
         .onAppear {
             //MARK: - OnAppear
-            pagPerguntasViewModel.obraDeArteDataLoader = ObraDeArteDataLoader(recebeuDados: {
-                self.recebeuDados = true
-            })
-            pagPerguntasViewModel.buscarObrasDeArte()
+            if !self.estaFazendoDismiss {
+                pagPerguntasViewModel.obraDeArteDataLoader = ObraDeArteDataLoader(recebeuDados: {
+                    self.recebeuDados = true
+                })
+                pagPerguntasViewModel.buscarObrasDeArte()
+            }
         }
         .onReceive(self.temporizador) { _ in
             //MARK: - OnReceive
             if recebeuDados {
-                if self.tempoQuestao > 0 {
-                    self.tempoQuestao -= 1
-                } else {
-                    self.tempoQuestao = 10
-                    self.contabilizaPergunta()
+                if qtdPerguntas < 5 {
+                    if self.tempoQuestao > 0 {
+                        self.tempoQuestao -= 1
+                    } else {
+                        self.tempoQuestao = 60
+                        self.contabilizaPergunta()
+                    }
                 }
             }
         }
@@ -125,25 +149,24 @@ struct PagPerguntasView: View {
         }
     }
     
-    func contabilizaPergunta() {
-        if self.qtdPerguntas < 5 {
-            self.verificaAcertoEIncrementaPergunta()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.tempoQuestao = 10
-                setupComponents()
-            }
-            return
-        }
-        self.verificaAcertoEIncrementaPergunta()
-        print("Perguntas: \(self.qtdPerguntas) || Acertos: \(self.qtdAcertos)")
-        self.ativaPagResultado()
-    }
-    
     func verificaAcertoEIncrementaPergunta() {
         if self.acertouResposta {
             self.qtdAcertos += 1
         }
-        self.qtdPerguntas += 1
+        if self.qtdPerguntas < 5 {
+            self.qtdPerguntas += 1
+        }
+    }
+    func contabilizaPergunta() {
+        self.verificaAcertoEIncrementaPergunta()
+        if self.qtdPerguntas < 5 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.tempoQuestao = 60
+                setupComponents()
+            }
+            return
+        }
+        self.ativaPagResultado()
     }
     
     func setupComponents() {

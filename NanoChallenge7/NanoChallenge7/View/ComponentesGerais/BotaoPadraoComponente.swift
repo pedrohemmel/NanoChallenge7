@@ -14,22 +14,33 @@ struct BotaoPadraoComponente: View {
     @Binding var able: Bool
     
     var tituloBotao: String
+    var acaoBotao: (() -> Color)
+    
     @State var txtTituloBotao: String = ""
     @State var espacamentoHorizontalBotao: CGFloat
     @State var curvaturaBotao: CGFloat
-    var acaoBotao: (() -> Color)
     @State var width: CGFloat? = nil
-    @State var colorOfButton = Color("azulApp")
+    @State var colorOfButton = Color("azuloApp")
     
     //MARK: - Body
      var body: some View {
          HStack {
              Button {
                  if self.able {
-                     if self.somPermitido {
-                     }
                      self.colorOfButton = self.acaoBotao()
+                     if self.somPermitido {
+                         if colorOfButton == Color("azulApp") {
+                             AVAudio.sharedInstance.playSoundEffect("entryGame.mp3")
+                         } else if colorOfButton == Color("vermelhoApp") {
+                             AVAudio.sharedInstance.playSoundEffect("wrong.mp3")
+                         } else if colorOfButton == Color.green {
+                             AVAudio.sharedInstance.playSoundEffect("right.mp3")
+                         } else {
+                             AVAudio.sharedInstance.playSoundEffect("tap.mpeg")
+                         }
+                     }
                      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                         
                          self.colorOfButton = Color("azulApp")
                          self.able = true
                      }

@@ -52,7 +52,6 @@ class PagPerguntasViewModel {
         }
         arrayRespostas.shuffle()
         
-        
         return arrayRespostas
     }
     

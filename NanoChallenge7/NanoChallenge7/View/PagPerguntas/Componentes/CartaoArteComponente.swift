@@ -22,15 +22,16 @@ struct CartaoArteComponente: View {
     var body: some View {
         VStack {
             Text("\(autor)")
-                .font(.system(size: 30))
+                .font(.system(size: 25))
                 .fontWeight(.bold)
+                .multilineTextAlignment(.center)
                 .foregroundColor(.black)
             
             if let data = data, let uiImage = UIImage(data: data) {
                 Image(uiImage: uiImage)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: 150, alignment: .center)
+                    .frame(height: 300, alignment: .center)
                     .padding(.top, 5)
             } else {
                 ProgressView()

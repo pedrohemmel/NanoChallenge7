@@ -45,6 +45,7 @@ struct RespostasArteComponente: View {
         }
         .onChange(of: self.possiveisRespostas) { newPossiveisRespostas in
             if self.permitirSetupDosComponentes {
+                self.permitirSetupDosComponentes = false
                 self.setupComponents(possiveisRespostas: newPossiveisRespostas, respostaCerta: self.respostaCertaAtualizada)
             } else {
                 self.permitirSetupDosComponentes = true
@@ -53,6 +54,7 @@ struct RespostasArteComponente: View {
         }
         .onChange(of: self.respostaCerta) { newRespostaCerta in
             if self.permitirSetupDosComponentes {
+                self.permitirSetupDosComponentes = false
                 self.setupComponents(possiveisRespostas: self.possiveisRespostasAtualizadas, respostaCerta: newRespostaCerta)
             } else {
                 self.permitirSetupDosComponentes = true
@@ -61,9 +63,12 @@ struct RespostasArteComponente: View {
         }
         .onChange(of: self.permitirSetupDosComponentes) { newValue in
             if self.permitirSetupDosComponentes {
-                self.setupComponents(
-                    possiveisRespostas: self.possiveisRespostas,
-                    respostaCerta: self.respostaCerta)
+                if self.respostaCerta == self.respostaCertaAtualizada {
+                    self.permitirSetupDosComponentes = false
+                    self.setupComponents(
+                        possiveisRespostas: self.possiveisRespostasAtualizadas,
+                        respostaCerta: self.respostaCerta)
+                }
             }
         }
     }
@@ -88,8 +93,6 @@ struct RespostasArteComponente: View {
             somPermitido: self.$somPermitido,
             able: self.$ableToClick,
             tituloBotao: "\(possiveisRespostas[0])",
-            espacamentoHorizontalBotao: 10,
-            curvaturaBotao: 20,
             acaoBotao: {
                 self.ableToClick = false
                 if self.verificaQuestaoCerta(resposta: possiveisRespostas[0], respostaCerta: respostaCerta) {
@@ -99,16 +102,15 @@ struct RespostasArteComponente: View {
                 } else {
                     self.acertouResposta = false
                     self.acaoAposResposta()
-                    return Color.red
+                    return Color("vermelhoApp")
                 }
-            },
+            }, espacamentoHorizontalBotao: 10,
+            curvaturaBotao: 20,
             width: UIScreen.screemWidth / 2 - 15)
         self.botaoRespostaB = BotaoPadraoComponente(
             somPermitido: self.$somPermitido,
             able: self.$ableToClick,
             tituloBotao: "\(possiveisRespostas[1])",
-            espacamentoHorizontalBotao: 10,
-            curvaturaBotao: 20,
             acaoBotao: {
                 self.ableToClick = false
                 if self.verificaQuestaoCerta(resposta: possiveisRespostas[1], respostaCerta: respostaCerta) {
@@ -118,16 +120,15 @@ struct RespostasArteComponente: View {
                 } else {
                     self.acertouResposta = false
                     self.acaoAposResposta()
-                    return Color.red
+                    return Color("vermelhoApp")
                 }
-            },
+            }, espacamentoHorizontalBotao: 10,
+            curvaturaBotao: 20,
             width: UIScreen.screemWidth / 2 - 15)
         self.botaoRespostaC = BotaoPadraoComponente(
             somPermitido: self.$somPermitido,
             able: self.$ableToClick,
             tituloBotao: "\(possiveisRespostas[2])",
-            espacamentoHorizontalBotao: 10,
-            curvaturaBotao: 20,
             acaoBotao: {
                 self.ableToClick = false
                 if self.verificaQuestaoCerta(resposta: possiveisRespostas[2], respostaCerta: respostaCerta) {
@@ -137,16 +138,15 @@ struct RespostasArteComponente: View {
                 } else {
                     self.acertouResposta = false
                     self.acaoAposResposta()
-                    return Color.red
+                    return Color("vermelhoApp")
                 }
-            },
+            }, espacamentoHorizontalBotao: 10,
+            curvaturaBotao: 20,
             width: UIScreen.screemWidth / 2 - 15)
         self.botaoRespostaD = BotaoPadraoComponente(
             somPermitido: self.$somPermitido,
             able: self.$ableToClick,
             tituloBotao: "\(possiveisRespostas[3])",
-            espacamentoHorizontalBotao: 10,
-            curvaturaBotao: 20,
             acaoBotao: {
                 self.ableToClick = false
                 if self.verificaQuestaoCerta(resposta: possiveisRespostas[3], respostaCerta: respostaCerta) {
@@ -156,9 +156,11 @@ struct RespostasArteComponente: View {
                 } else {
                     self.acertouResposta = false
                     self.acaoAposResposta()
-                    return Color.red
+                    return Color("vermelhoApp")
                 }
             },
+            espacamentoHorizontalBotao: 10,
+            curvaturaBotao: 20,
             width: UIScreen.screemWidth / 2 - 15)
     }
 }

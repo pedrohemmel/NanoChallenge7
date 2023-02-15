@@ -26,6 +26,10 @@
 		BBC3111B2995EA03005F8533 /* PagPerguntasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3111A2995EA03005F8533 /* PagPerguntasViewModel.swift */; };
 		BBC3111D29974E69005F8533 /* RespostasArteComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3111C29974E69005F8533 /* RespostasArteComponente.swift */; };
 		BBC31121299AE33D005F8533 /* PagResultado.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC31120299AE33D005F8533 /* PagResultado.swift */; };
+		BBEACFAD299D5B6F001DCE17 /* tap.mpeg in Resources */ = {isa = PBXBuildFile; fileRef = BBEACFAC299D5B6F001DCE17 /* tap.mpeg */; };
+		BBEACFB1299D5BC2001DCE17 /* right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBEACFAE299D5BC2001DCE17 /* right.mp3 */; };
+		BBEACFB2299D5BC2001DCE17 /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBEACFAF299D5BC2001DCE17 /* wrong.mp3 */; };
+		BBEACFB3299D5BC2001DCE17 /* entryGame.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBEACFB0299D5BC2001DCE17 /* entryGame.mp3 */; };
 		EB34F6CB29942502005DD5CE /* CartaoArteComponente.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB34F6CA29942502005DD5CE /* CartaoArteComponente.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +73,10 @@
 		BBC3111A2995EA03005F8533 /* PagPerguntasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagPerguntasViewModel.swift; sourceTree = "<group>"; };
 		BBC3111C29974E69005F8533 /* RespostasArteComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespostasArteComponente.swift; sourceTree = "<group>"; };
 		BBC31120299AE33D005F8533 /* PagResultado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagResultado.swift; sourceTree = "<group>"; };
+		BBEACFAC299D5B6F001DCE17 /* tap.mpeg */ = {isa = PBXFileReference; lastKnownFileType = video.mpeg; path = tap.mpeg; sourceTree = "<group>"; };
+		BBEACFAE299D5BC2001DCE17 /* right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = right.mp3; sourceTree = "<group>"; };
+		BBEACFAF299D5BC2001DCE17 /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
+		BBEACFB0299D5BC2001DCE17 /* entryGame.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = entryGame.mp3; sourceTree = "<group>"; };
 		EB34F6CA29942502005DD5CE /* CartaoArteComponente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CartaoArteComponente.swift; path = NanoChallenge7/View/PagPerguntas/Componentes/CartaoArteComponente.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -158,6 +166,7 @@
 		BBC310F02992D227005F8533 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BBEACFA3299D1F56001DCE17 /* Sounds */,
 				BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */,
 				BBC3110D29949819005F8533 /* ExtensaoUIScreen.swift */,
 				BBC3110F2994B325005F8533 /* AVAudio.swift */,
@@ -260,6 +269,17 @@
 				BBC31120299AE33D005F8533 /* PagResultado.swift */,
 			);
 			path = Flow;
+			sourceTree = "<group>";
+		};
+		BBEACFA3299D1F56001DCE17 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				BBEACFB0299D5BC2001DCE17 /* entryGame.mp3 */,
+				BBEACFAE299D5BC2001DCE17 /* right.mp3 */,
+				BBEACFAF299D5BC2001DCE17 /* wrong.mp3 */,
+				BBEACFAC299D5B6F001DCE17 /* tap.mpeg */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +386,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEACFB2299D5BC2001DCE17 /* wrong.mp3 in Resources */,
+				BBEACFAD299D5B6F001DCE17 /* tap.mpeg in Resources */,
+				BBEACFB1299D5BC2001DCE17 /* right.mp3 in Resources */,
+				BBEACFB3299D5BC2001DCE17 /* entryGame.mp3 in Resources */,
 				BB38095A298D797F0087F515 /* Preview Assets.xcassets in Resources */,
 				BB380957298D797F0087F515 /* Assets.xcassets in Resources */,
 			);

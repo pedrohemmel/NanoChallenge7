@@ -19,7 +19,3 @@ struct ObraDeArteModel: Codable {
     var medium_display: String?
     var image_id: String?
 }
-
-extension ObraDeArteModel: Equatable {
-    
-}

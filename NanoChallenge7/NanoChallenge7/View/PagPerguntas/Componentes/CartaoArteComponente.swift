@@ -58,13 +58,17 @@ struct CartaoArteComponente: View {
         .cornerRadius(10)
         .shadow(color: Color.gray, radius: 10, x: 1, y: 0)
         .onAppear {
-            buscarImagem()
+            buscarImagem(self.imagem_id)
+        }
+        .onChange(of: self.imagem_id) { newImage in
+            self.data = nil
+            buscarImagem(newImage)
         }
     }
     
     //MARK: - Funções aqui
-    func buscarImagem() {
-        guard let url = URL(string: "https://www.artic.edu/iiif/2/\(self.imagem_id)/full/843,/0/default.jpg") else {
+    func buscarImagem(_ imagem: String) {
+        guard let url = URL(string: "https://www.artic.edu/iiif/2/\(imagem)/full/843,/0/default.jpg") else {
             return
         }
         

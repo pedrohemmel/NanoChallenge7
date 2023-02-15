@@ -13,10 +13,11 @@ struct BotaoPadraoComponente: View {
     @Binding var somPermitido: Bool
     @Binding var able: Bool
     
-    @State var tituloBotao: String
+    var tituloBotao: String
+    @State var txtTituloBotao: String = ""
     @State var espacamentoHorizontalBotao: CGFloat
     @State var curvaturaBotao: CGFloat
-    @State var acaoBotao: (() -> Color)
+    var acaoBotao: (() -> Color)
     @State var width: CGFloat? = nil
     @State var colorOfButton = Color("azulApp")
     
@@ -26,12 +27,15 @@ struct BotaoPadraoComponente: View {
              Button {
                  if self.able {
                      if self.somPermitido {
-                         
                      }
                      self.colorOfButton = self.acaoBotao()
+                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                         self.colorOfButton = Color("azulApp")
+                         self.able = true
+                     }
                  }
              } label: {
-                 Text(self.tituloBotao)
+                 Text(self.txtTituloBotao)
                      .foregroundColor(.white)
                      .padding(.horizontal, self.espacamentoHorizontalBotao)
                      .padding(.vertical, 20)
@@ -39,6 +43,12 @@ struct BotaoPadraoComponente: View {
              }
              .background(self.colorOfButton)
              .cornerRadius(self.curvaturaBotao)
+         }
+         .onAppear {
+             self.txtTituloBotao = self.tituloBotao
+         }
+         .onChange(of: self.tituloBotao) { newTituloBotao in
+             self.txtTituloBotao = newTituloBotao
          }
      }
 }

@@ -21,10 +21,18 @@ class PagPerguntasViewModel {
         }
         return false
     }
-    func buscaObraDeArteRandomica() -> ObraDeArteModel {
+    func estruturaCondicionalDeTratativa(numAleatorio: Int, atualObraDeArte: ObraDeArteModel) -> Bool {
+        if !self.verificaSeOAnoEstaFormatado(ano: self.obraDeArteDataLoader?.obraDeArteDataModel?.data[numAleatorio].date_display ?? "") && self.obraDeArteDataLoader?.obraDeArteDataModel?.data[numAleatorio].id != atualObraDeArte.id {
+            return true
+        } else {
+            return false
+        }
+    }
+    func buscaObraDeArteRandomica(atualObraDeArte: ObraDeArteModel) -> ObraDeArteModel {
         var numAleatorio = Int.random(in: 0...(self.obraDeArteDataLoader?.obraDeArteDataModel!.data.count ?? 1)-1)
         
-        while !self.verificaSeOAnoEstaFormatado(ano: self.obraDeArteDataLoader?.obraDeArteDataModel?.data[numAleatorio].date_display ?? "") {
+        
+        while self.estruturaCondicionalDeTratativa(numAleatorio: numAleatorio, atualObraDeArte: atualObraDeArte) {
             numAleatorio = Int.random(in: 0...(self.obraDeArteDataLoader?.obraDeArteDataModel!.data.count ?? 1)-1)
         }
         
@@ -43,6 +51,7 @@ class PagPerguntasViewModel {
             }
         }
         arrayRespostas.shuffle()
+        
         
         return arrayRespostas
     }

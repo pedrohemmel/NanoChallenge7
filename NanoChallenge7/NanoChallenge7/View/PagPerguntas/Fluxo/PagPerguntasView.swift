@@ -16,7 +16,7 @@ struct PagPerguntasView: View {
     @State var acertouResposta = false
     @State var pagResultadoAtivo = false
     
-    @State var qtdPerguntas = 0
+    @State var qtdPerguntas = 1
     @State var qtdAcertos = 0
     
     @State var pagPerguntasViewModel = PagPerguntasViewModel()
@@ -25,7 +25,9 @@ struct PagPerguntasView: View {
     @State var obraDeArteModel: ObraDeArteModel?
     @State var recebeuDados = false
     
-    @State var tempoQuestao = 60
+    var oba = false
+    
+    @State var tempoQuestao = 10
     @State var tempoEstaCorrendo = false
     let temporizador = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -35,7 +37,6 @@ struct PagPerguntasView: View {
     
     //MARK: - Body
     var body: some View {
-        
         ScrollView {
             NavigationLink(destination: PagResultado(), isActive: self.$pagResultadoAtivo, label: {})
             if !recebeuDados {
@@ -49,6 +50,7 @@ struct PagPerguntasView: View {
                         .padding(.top, 70)
                     respostasArteComponente
                         .padding(.top, 10)
+                        .padding(.bottom, 50)
                 }
                 .frame(width: UIScreen.screemWidth)
                 .onAppear {
@@ -102,6 +104,9 @@ struct PagPerguntasView: View {
             if recebeuDados {
                 if self.tempoQuestao > 0 {
                     self.tempoQuestao -= 1
+                } else {
+                    self.tempoQuestao = 10
+                    self.contabilizaPergunta()
                 }
             }
         }
@@ -114,8 +119,28 @@ struct PagPerguntasView: View {
         }
     }
     
+    func contabilizaPergunta() {
+        if self.qtdPerguntas < 5 {
+            self.verificaAcertoEIncrementaPergunta()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                setupComponents()
+            }
+            return
+        }
+        self.verificaAcertoEIncrementaPergunta()
+        print("Perguntas: \(self.qtdPerguntas) || Acertos: \(self.qtdAcertos)")
+        self.ativaPagResultado()
+    }
+    
+    func verificaAcertoEIncrementaPergunta() {
+        if self.acertouResposta {
+            self.qtdAcertos += 1
+        }
+        self.qtdPerguntas += 1
+    }
+    
     func setupComponents() {
-        self.obraDeArteModel = pagPerguntasViewModel.buscaObraDeArteRandomica()
+        self.obraDeArteModel = pagPerguntasViewModel.buscaObraDeArteRandomica(atualObraDeArte: self.obraDeArteModel ?? ObraDeArteModel(id: -1, title: ""))
         self.possiveisRespostas = self.pagPerguntasViewModel.gerarPossiveisRespostas(respostaCerta: Int(self.obraDeArteModel?.date_display ?? "0") ?? 0)
         
         self.cartaoArteComponente = CartaoArteComponente(
@@ -130,16 +155,7 @@ struct PagPerguntasView: View {
             somPermitido: self.$somPermitido,
             acertouResposta: self.$acertouResposta,
             acaoAposResposta: {
-                if self.qtdPerguntas <= 5 {
-                    if self.acertouResposta {
-                        self.qtdAcertos += 1
-                    }
-                    self.qtdPerguntas += 1
-                    setupComponents()
-                    return
-                }
-                print("Perguntas: \(self.qtdPerguntas) || Acertos: \(self.qtdAcertos)")
-                self.ativaPagResultado()
+                self.contabilizaPergunta()
             },
             possiveisRespostas: self.possiveisRespostas,
             respostaCerta: Int(self.obraDeArteModel?.date_display ?? "0") ?? 0)

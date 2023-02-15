@@ -3,4 +3,22 @@
    uuid = "786C9594-BF5D-4F22-9B1C-C7FC8D3F4875"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27EF2AC5-1D8A-4FB6-9B6E-1D91F4A5A9C8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NanoChallenge7/View/PagPerguntas/Componentes/RespostasArteComponente.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "setupComponents(possiveisRespostas:respostaCerta:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

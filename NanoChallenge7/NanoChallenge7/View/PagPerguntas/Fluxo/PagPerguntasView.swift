@@ -174,7 +174,6 @@ struct PagPerguntasView: View {
         self.obraDeArteModel = pagPerguntasViewModel.buscaObraDeArteRandomica(arrObrasDeArteDaVez: self.arrObrasDeArteDaVez)
         self.possiveisRespostas = self.pagPerguntasViewModel.gerarPossiveisRespostas(respostaCerta: Int(self.obraDeArteModel?.date_display ?? "0") ?? 0)
         self.arrObrasDeArteDaVez.append(self.obraDeArteModel ?? ObraDeArteModel(id: -1, title: ""))
-        print(arrObrasDeArteDaVez)
         
         self.cartaoArteComponente = CartaoArteComponente(
             autor: self.obraDeArteModel?.artist_display ?? "",

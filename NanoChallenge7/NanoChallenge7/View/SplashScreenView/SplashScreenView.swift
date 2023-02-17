@@ -32,6 +32,7 @@ struct SplashScreenView: View {
                     }
                     
             }
+            .background(Color("backgroundApp"))
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                     self.mostraPaginaPrincipal = true

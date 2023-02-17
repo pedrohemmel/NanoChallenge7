@@ -9,6 +9,6 @@ import Foundation
 
 final class PagInicialViewModel {
     func tocarSom() {
-        AVAudio.sharedInstance.playSoundEffect("coinsound.wav")
+        AVAudioInstance.playSoundEffect("coinsound.wav")
     }
 }

@@ -30,13 +30,13 @@ struct BotaoPadraoComponente: View {
                      self.colorOfButton = self.acaoBotao()
                      if self.somPermitido {
                          if colorOfButton == Color("azulApp") {
-                             AVAudio.sharedInstance.playSoundEffect("entryGame.mp3")
+                             AVAudioInstance.playSoundEffect("entryGame.mp3")
                          } else if colorOfButton == Color("vermelhoApp") {
-                             AVAudio.sharedInstance.playSoundEffect("wrong.mp3")
+                             AVAudioInstance.playSoundEffect("wrong.mp3")
                          } else if colorOfButton == Color.green {
-                             AVAudio.sharedInstance.playSoundEffect("right.mp3")
+                             AVAudioInstance.playSoundEffect("right.mp3")
                          } else {
-                             AVAudio.sharedInstance.playSoundEffect("tap.mpeg")
+                             AVAudioInstance.playSoundEffect("tap.mpeg")
                          }
                      }
                      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

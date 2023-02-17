@@ -20,7 +20,7 @@ class ObraDeArteDataLoader: ObservableObject {
     }
     
     func buscarDados() {
-        guard let url = URL(string: "https://api.artic.edu/api/v1/artworks?page=4&limit=100") else { return }
+        guard let url = URL(string: "https://api.artic.edu/api/v1/artworks?page=1&limit=100") else { return }
         
         //MARK: - URLSession
         URLSession.shared.dataTask(with: url) { dados, resposta, erro in

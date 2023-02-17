@@ -14,6 +14,7 @@
 		BB380964298D797F0087F515 /* NanoChallenge7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB380963298D797F0087F515 /* NanoChallenge7Tests.swift */; };
 		BB38096E298D797F0087F515 /* NanoChallenge7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38096D298D797F0087F515 /* NanoChallenge7UITests.swift */; };
 		BB380970298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38096F298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift */; };
+		BB7D37CA299EDD6500DC42A0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D37C9299EDD6500DC42A0 /* SplashScreenView.swift */; };
 		BBC310F52992D4BA005F8533 /* ObraDeArteDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */; };
 		BBC310F72994199B005F8533 /* ObraDeArteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC310F62994199B005F8533 /* ObraDeArteModel.swift */; };
 		BBC311052994448D005F8533 /* PagInicialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC311042994448D005F8533 /* PagInicialView.swift */; };
@@ -52,15 +53,16 @@
 
 /* Begin PBXFileReference section */
 		0D49C0B12992C30D0046CBA4 /* ObraDeArteDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteDataModel.swift; sourceTree = "<group>"; };
-		BB38094F298D797D0087F515 /* NanoChallenge7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge7.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB38094F298D797D0087F515 /* Quizart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB380952298D797D0087F515 /* NanoChallenge7App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge7App.swift; sourceTree = "<group>"; };
 		BB380956298D797F0087F515 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB380959298D797F0087F515 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BB38095F298D797F0087F515 /* NanoChallenge7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoChallenge7Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB38095F298D797F0087F515 /* QuizartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB380963298D797F0087F515 /* NanoChallenge7Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge7Tests.swift; sourceTree = "<group>"; };
-		BB380969298D797F0087F515 /* NanoChallenge7UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoChallenge7UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB380969298D797F0087F515 /* QuizartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB38096D298D797F0087F515 /* NanoChallenge7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge7UITests.swift; sourceTree = "<group>"; };
 		BB38096F298D797F0087F515 /* NanoChallenge7UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge7UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB7D37C9299EDD6500DC42A0 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		BBC310F42992D4BA005F8533 /* ObraDeArteDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteDataLoader.swift; sourceTree = "<group>"; };
 		BBC310F62994199B005F8533 /* ObraDeArteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObraDeArteModel.swift; sourceTree = "<group>"; };
 		BBC311042994448D005F8533 /* PagInicialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagInicialView.swift; sourceTree = "<group>"; };
@@ -118,9 +120,9 @@
 		BB380950298D797D0087F515 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB38094F298D797D0087F515 /* NanoChallenge7.app */,
-				BB38095F298D797F0087F515 /* NanoChallenge7Tests.xctest */,
-				BB380969298D797F0087F515 /* NanoChallenge7UITests.xctest */,
+				BB38094F298D797D0087F515 /* Quizart.app */,
+				BB38095F298D797F0087F515 /* QuizartTests.xctest */,
+				BB380969298D797F0087F515 /* QuizartUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +165,14 @@
 			path = NanoChallenge7UITests;
 			sourceTree = "<group>";
 		};
+		BB7D37CB299EDD6C00DC42A0 /* SplashScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D37C9299EDD6500DC42A0 /* SplashScreenView.swift */,
+			);
+			path = SplashScreenView;
+			sourceTree = "<group>";
+		};
 		BBC310F02992D227005F8533 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 		BBC310F22992D272005F8533 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BB7D37CB299EDD6C00DC42A0 /* SplashScreenView */,
 				BBC3110129944426005F8533 /* ComponentesGerais */,
 				BBC3110229944433005F8533 /* PagInicial */,
 				BBC311152995E994005F8533 /* PagPerguntas */,
@@ -285,9 +296,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB38094E298D797D0087F515 /* NanoChallenge7 */ = {
+		BB38094E298D797D0087F515 /* Quizart */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB380973298D797F0087F515 /* Build configuration list for PBXNativeTarget "NanoChallenge7" */;
+			buildConfigurationList = BB380973298D797F0087F515 /* Build configuration list for PBXNativeTarget "Quizart" */;
 			buildPhases = (
 				BB38094B298D797D0087F515 /* Sources */,
 				BB38094C298D797D0087F515 /* Frameworks */,
@@ -297,14 +308,14 @@
 			);
 			dependencies = (
 			);
-			name = NanoChallenge7;
+			name = Quizart;
 			productName = NanoChallenge7;
-			productReference = BB38094F298D797D0087F515 /* NanoChallenge7.app */;
+			productReference = BB38094F298D797D0087F515 /* Quizart.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BB38095E298D797F0087F515 /* NanoChallenge7Tests */ = {
+		BB38095E298D797F0087F515 /* QuizartTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB380976298D797F0087F515 /* Build configuration list for PBXNativeTarget "NanoChallenge7Tests" */;
+			buildConfigurationList = BB380976298D797F0087F515 /* Build configuration list for PBXNativeTarget "QuizartTests" */;
 			buildPhases = (
 				BB38095B298D797F0087F515 /* Sources */,
 				BB38095C298D797F0087F515 /* Frameworks */,
@@ -315,14 +326,14 @@
 			dependencies = (
 				BB380961298D797F0087F515 /* PBXTargetDependency */,
 			);
-			name = NanoChallenge7Tests;
+			name = QuizartTests;
 			productName = NanoChallenge7Tests;
-			productReference = BB38095F298D797F0087F515 /* NanoChallenge7Tests.xctest */;
+			productReference = BB38095F298D797F0087F515 /* QuizartTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BB380968298D797F0087F515 /* NanoChallenge7UITests */ = {
+		BB380968298D797F0087F515 /* QuizartUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB380979298D797F0087F515 /* Build configuration list for PBXNativeTarget "NanoChallenge7UITests" */;
+			buildConfigurationList = BB380979298D797F0087F515 /* Build configuration list for PBXNativeTarget "QuizartUITests" */;
 			buildPhases = (
 				BB380965298D797F0087F515 /* Sources */,
 				BB380966298D797F0087F515 /* Frameworks */,
@@ -333,9 +344,9 @@
 			dependencies = (
 				BB38096B298D797F0087F515 /* PBXTargetDependency */,
 			);
-			name = NanoChallenge7UITests;
+			name = QuizartUITests;
 			productName = NanoChallenge7UITests;
-			productReference = BB380969298D797F0087F515 /* NanoChallenge7UITests.xctest */;
+			productReference = BB380969298D797F0087F515 /* QuizartUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -361,7 +372,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BB38094A298D797D0087F515 /* Build configuration list for PBXProject "NanoChallenge7" */;
+			buildConfigurationList = BB38094A298D797D0087F515 /* Build configuration list for PBXProject "Quizart" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -374,9 +385,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB38094E298D797D0087F515 /* NanoChallenge7 */,
-				BB38095E298D797F0087F515 /* NanoChallenge7Tests */,
-				BB380968298D797F0087F515 /* NanoChallenge7UITests */,
+				BB38094E298D797D0087F515 /* Quizart */,
+				BB38095E298D797F0087F515 /* QuizartTests */,
+				BB380968298D797F0087F515 /* QuizartUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -423,6 +434,7 @@
 				BBC310F72994199B005F8533 /* ObraDeArteModel.swift in Sources */,
 				BBC3111B2995EA03005F8533 /* PagPerguntasViewModel.swift in Sources */,
 				BB380953298D797D0087F515 /* NanoChallenge7App.swift in Sources */,
+				BB7D37CA299EDD6500DC42A0 /* SplashScreenView.swift in Sources */,
 				BBC310F52992D4BA005F8533 /* ObraDeArteDataLoader.swift in Sources */,
 				BBC3110729944497005F8533 /* PagInicialViewModel.swift in Sources */,
 				BBC3110C299445A2005F8533 /* BotaoDSomComponente.swift in Sources */,
@@ -456,12 +468,12 @@
 /* Begin PBXTargetDependency section */
 		BB380961298D797F0087F515 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BB38094E298D797D0087F515 /* NanoChallenge7 */;
+			target = BB38094E298D797D0087F515 /* Quizart */;
 			targetProxy = BB380960298D797F0087F515 /* PBXContainerItemProxy */;
 		};
 		BB38096B298D797F0087F515 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BB38094E298D797D0087F515 /* NanoChallenge7 */;
+			target = BB38094E298D797D0087F515 /* Quizart */;
 			targetProxy = BB38096A298D797F0087F515 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -592,11 +604,13 @@
 				DEVELOPMENT_TEAM = UFS93RKF34;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Quizart;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -621,11 +635,13 @@
 				DEVELOPMENT_TEAM = UFS93RKF34;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Quizart;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -655,7 +671,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NanoChallenge7.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NanoChallenge7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quizart.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Quizart";
 			};
 			name = Debug;
 		};
@@ -675,7 +691,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NanoChallenge7.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NanoChallenge7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quizart.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Quizart";
 			};
 			name = Release;
 		};
@@ -718,7 +734,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB38094A298D797D0087F515 /* Build configuration list for PBXProject "NanoChallenge7" */ = {
+		BB38094A298D797D0087F515 /* Build configuration list for PBXProject "Quizart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB380971298D797F0087F515 /* Debug */,
@@ -727,7 +743,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB380973298D797F0087F515 /* Build configuration list for PBXNativeTarget "NanoChallenge7" */ = {
+		BB380973298D797F0087F515 /* Build configuration list for PBXNativeTarget "Quizart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB380974298D797F0087F515 /* Debug */,
@@ -736,7 +752,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB380976298D797F0087F515 /* Build configuration list for PBXNativeTarget "NanoChallenge7Tests" */ = {
+		BB380976298D797F0087F515 /* Build configuration list for PBXNativeTarget "QuizartTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB380977298D797F0087F515 /* Debug */,
@@ -745,7 +761,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB380979298D797F0087F515 /* Build configuration list for PBXNativeTarget "NanoChallenge7UITests" */ = {
+		BB380979298D797F0087F515 /* Build configuration list for PBXNativeTarget "QuizartUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB38097A298D797F0087F515 /* Debug */,

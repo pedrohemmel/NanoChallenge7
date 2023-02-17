@@ -21,18 +21,25 @@ class PagPerguntasViewModel {
         }
         return false
     }
-    func estruturaCondicionalDeTratativa(numAleatorio: Int, atualObraDeArte: ObraDeArteModel) -> Bool {
-        if !self.verificaSeOAnoEstaFormatado(ano: self.obraDeArteDataLoader?.obraDeArteDataModel?.data[numAleatorio].date_display ?? "") && self.obraDeArteDataLoader?.obraDeArteDataModel?.data[numAleatorio].id != atualObraDeArte.id {
-            return true
-        } else {
-            return false
+    func estruturaCondicionalDeTratativa(numAleatorio: Int, arrObrasDeArteDaVez: [ObraDeArteModel]) -> Bool {
+        for obraDeArteDaVez in arrObrasDeArteDaVez {
+            if obraDeArteDaVez.title == (self.obraDeArteDataLoader?.obraDeArteDataModel?.data[numAleatorio].title ?? "") {
+                return true
+            }
         }
+        
+        if !self.verificaSeOAnoEstaFormatado(ano: self.obraDeArteDataLoader?.obraDeArteDataModel?.data[numAleatorio].date_display ?? ""){
+            return true
+        }
+          
+        return false
+        
     }
-    func buscaObraDeArteRandomica(atualObraDeArte: ObraDeArteModel) -> ObraDeArteModel {
+    func buscaObraDeArteRandomica(arrObrasDeArteDaVez: [ObraDeArteModel]) -> ObraDeArteModel {
         var numAleatorio = Int.random(in: 0...(self.obraDeArteDataLoader?.obraDeArteDataModel!.data.count ?? 1)-1)
         
         
-        while self.estruturaCondicionalDeTratativa(numAleatorio: numAleatorio, atualObraDeArte: atualObraDeArte) {
+        while self.estruturaCondicionalDeTratativa(numAleatorio: numAleatorio, arrObrasDeArteDaVez: arrObrasDeArteDaVez) {
             numAleatorio = Int.random(in: 0...(self.obraDeArteDataLoader?.obraDeArteDataModel!.data.count ?? 1)-1)
         }
         

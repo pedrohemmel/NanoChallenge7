@@ -23,8 +23,9 @@ struct PagPerguntasView: View {
     
     @State var pagPerguntasViewModel = PagPerguntasViewModel()
     @State var possiveisRespostas = [Int]()
-    
     @State var obraDeArteModel: ObraDeArteModel?
+    @State var arrObrasDeArteDaVez = [ObraDeArteModel]()
+    
     @State var recebeuDados = false
     
     @State var tempoQuestao = 60
@@ -59,8 +60,7 @@ struct PagPerguntasView: View {
                 .frame(width: UIScreen.screemWidth, height: UIScreen.screenHeight)
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
-                        self.tempoQuestao = 60
-                        setupComponents()
+                        self.mostraErroInternet = true
                     }
                 }
             } else {
@@ -166,12 +166,15 @@ struct PagPerguntasView: View {
             }
             return
         }
+        self.arrObrasDeArteDaVez = [ObraDeArteModel]()
         self.ativaPagResultado()
     }
     
     func setupComponents() {
-        self.obraDeArteModel = pagPerguntasViewModel.buscaObraDeArteRandomica(atualObraDeArte: self.obraDeArteModel ?? ObraDeArteModel(id: -1, title: ""))
+        self.obraDeArteModel = pagPerguntasViewModel.buscaObraDeArteRandomica(arrObrasDeArteDaVez: self.arrObrasDeArteDaVez)
         self.possiveisRespostas = self.pagPerguntasViewModel.gerarPossiveisRespostas(respostaCerta: Int(self.obraDeArteModel?.date_display ?? "0") ?? 0)
+        self.arrObrasDeArteDaVez.append(self.obraDeArteModel ?? ObraDeArteModel(id: -1, title: ""))
+        print(arrObrasDeArteDaVez)
         
         self.cartaoArteComponente = CartaoArteComponente(
             autor: self.obraDeArteModel?.artist_display ?? "",

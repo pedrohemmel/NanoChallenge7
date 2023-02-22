@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import AVFoundation
 
 struct BotaoPadraoComponente: View {
     //MARK: - Global variables
